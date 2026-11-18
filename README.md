@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# IMR Movie Portal
 
-## Getting Started
+CPRG 306 Assignment 3 — Full-Stack Web Applications  
+Team Members: Minyan Liu, Iris Dunbar, Hoang Yen Nguyen
 
-First, run the development server:
+Internet Movies Rental Company (IMR) movie database: list, add, edit, and delete movies with Supabase.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Empty architecture
+
+```
+app/
+  layout.tsx      Navbar + page + Footer
+  page.tsx        Movies page (dummy data for now)
+components/
+  Navbar.tsx      Static navbar
+  Footer.tsx      Company / contact
+  MovieList.tsx   List of movies
+  MovieCard.tsx   One movie (title, actors, year)
+  MovieForm.tsx   Add / edit form (empty)
+lib/
+  supabase.ts     Database client (TODO)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## How to run
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Copy `.env.example` to `.env.local` and add Supabase keys when the database is ready.
 
-## Learn More
+## Suggested work split
 
-To learn more about Next.js, take a look at the following resources:
+- **Minyan** — layout, Navbar, Footer, Supabase connection, deploy (Vercel)
+- **Yen** —  MovieCard, MovieList
+- **Iris** — MovieForm, page
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Submit
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- GitHub repository link
+- Deployed website link
+- One submission per group
